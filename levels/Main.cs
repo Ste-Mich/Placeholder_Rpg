@@ -23,18 +23,18 @@ public class Main : Node2D
 	}
 
 	public void SwitchCombat()
-    {
-        if (Island.Visible)
+	{
+		if (Island.Visible)
 		{
 			FreezeOverworld(true);
 			FreezeCombat(false);
 		}
-        else
+		else
 		{
 			FreezeOverworld(false);
 			FreezeCombat(true);
 		}
-    }
+	}
 
 	public void FreezeOverworld(bool freeze)
 	{
@@ -51,16 +51,16 @@ public class Main : Node2D
 	}
 
 	public void FreezeCombat(bool freeze)
-    {
-        if (freeze)
+	{
+		if (freeze)
 		{
 			CombatArena.PauseMode = PauseModeEnum.Stop;
 			CombatArena.Visible = false;
 		}
-        else
-        {
+		else
+		{
 			CombatArena.PauseMode = PauseModeEnum.Inherit;
 			CombatArena.Visible = true;
 		}
-    }
+	}
 }
